@@ -9,3 +9,17 @@ void InsertSort(int a[],int len){
 		a[j+1]=key;
 	}
 }
+
+void  SelectionSort(int a[],int len){
+	for(int i=0;i<len-1;i++){
+		int smallest=i;
+		for(int j=i;j<len;j++){
+			if(a[smallest]>a[j]) smallest=j;		
+		}
+		if(smallest!=i){
+			int tmp=a[i];
+			a[i]=a[smallest];
+			a[smallest]=tmp;
+		}
+	}
+}
